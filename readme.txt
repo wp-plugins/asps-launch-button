@@ -43,7 +43,7 @@ You can now add a launch button in your side column by going to Dashboard > Appe
 
 = 2.0 =
 * Revised for version 2.0 ASPS web browser.
-* Images no longer embedded - images can be edited for design/langauage.
+* Images no longer embedded - images can be edited for design/language.
 * Detects and launches both version 1 and 2 series ASPS browser.
 
 = 1.0 =
