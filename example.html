@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+
+<body>
+
+<script type="text/javascript" src="/wp-content/plugins/asps-launch-button/asps-launch-button.js"></script>
+<script type="text/javascript">
+
+	document.write("<a href='");
+	document.write(retLink);
+	document.write("' onMouseOut='MM_swapImgRestore()'");
+	document.write(" onMouseOver=MM_swapImage('launch','','");
+	document.write(imgMouseOver);
+	document.write("',0)><img src='");
+	document.write(imgMouseOff);
+	document.write("' width='163' height='43' name='launch' border='0'");
+	document.write(" OnClick='LaunchClick(");
+	document.write(appLaunch);
+	document.write(");'></a>");
+	
+</script>
+
+</body>
+</html>
+

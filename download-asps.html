@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Download the ASPS Web Browser</title>
+<meta charset="UTF-8">
+<script type="text/javascript" >
+
+function openASPS(){
+	//location.href = "callasps:http%3A%2F%2Fartistscope.com";
+	location.href = "callasps:http://web-reader.artistscope.com";
+}
+
+function getParameterByName(name){
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+var errmess = getParameterByName('ms');
+var inmessage = false;
+	
+if ((errmess == "chrome") || (errmess == "trident")){
+	inmessage = true;
+}
+
+</script>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table align="center" border="0" cellpadding="10" cellspacing="0" width="680">
+<tr>
+<td class="text" align="center" rowspan="2" valign="top">
+<br>
+      <b>Download the ASPS Web Browser</b><br>
+      <br>
+      <div align="center">
+      <script type="text/javascript">
+      if (inmessage){
+      	document.write('<div class="text" align="left"><font color="#FF3333">');
+      	document.write('Your version of web browser no longer supports proper plugins so it cannot launch the ASPS browser from a web page. ');
+      	document.write('So if the ASPS browser is already installed, try launching it by clicking the button below. ');
+      	document.write('Then navigate to the protected page that you wanted.</font></div><br><br>');
+      }
+      </script>
+
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#C0C0C0" bgcolor="#FFFFFF">
+                      <tr>
+                        <td width="100%" align="center">
+
+        <table width="80%" border="0" cellspacing="0" cellpadding="3">
+          <tr> 
+            <td nowrap>&nbsp;&nbsp;&nbsp;</td>
+            <td nowrap><div align="center">
+				<img src="images/windows50.jpg" width="61" height="50"></div>
+            </td>
+            <td class="text" nowrap align="left">&nbsp;&nbsp;&nbsp;Windows 32-bit and 64-bit&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td class="text" nowrap> 
+              <a href="http://images.artistscope.com/download/ASPS_Browser_install.exe"><u>Download Now</u></a></td>
+            <td class="text" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          </tr>
+        </table>
+                       </td>
+                      </tr>
+                    </table>
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		    <td class="text" align="left" style="text-align: justify"> The ASPS 
+              Web Browser is a standalone application independent 
+              of other readers and web browsers that has been specially designed 
+			to prevent the abuse of intellectual property and preserve copy 
+			protection limitations as and when required. It is not designed 
+              to be a <i>popular</i> web browser and the user agrees that in 
+			using the ASPS Web Browser that they are in full agreement with the  
+              <a target="_blank" href="ASPSbrowser_license.pdf">terms of use</a>.<br>
+			<br>
+<script type="text/javascript">
+if (inmessage){
+
+	document.write('<b>Troubleshooting</b><br><br>');
+	document.write('If continually returned to this page after installing the ASPS Web browser, try clicking the button below:');
+	document.write('<br><br><div align="center"><a href="javascript:void(0)">');
+	document.write('<img src="images/launch_launch_off.png" width="163" height="43" border="0" onclick="openASPS();"></a>');
+	document.write('<br><br></div>');
+	document.write('If there is no response, it means that the browser is not installed in its default location, ');
+	document.write('in which case you need to install again from the download link above.<br>');
+			
+}
+
+</script>
+
+			</td>
+	</tr>
+</table>
+</div>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
