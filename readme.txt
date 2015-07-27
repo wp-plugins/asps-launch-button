@@ -41,6 +41,9 @@ You can now add a launch button in your side column by going to Dashboard > Appe
 
 == Changelog ==
 
+= 2.1 =
+* Revised plugin folder detection for non-root installs.
+
 = 2.0 =
 * Revised for version 2.0 ASPS web browser.
 * Images no longer embedded - images can be edited for design/language.

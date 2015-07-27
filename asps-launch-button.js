@@ -7,18 +7,18 @@
 //=======================================
 // images: edit to change images only
 //=======================================
-
-	var imgLaunchBlue = "/wp-content/plugins/asps-launch-button/images/launch_launch_off.png";
-	var imgLaunchGreen = "/wp-content/plugins/asps-launch-button/images/launch_launch_on.png";
-	var imgInstallBlue = "/wp-content/plugins/asps-launch-button/images/launch_install_off.png";
-	var imgInstallGreen = "/wp-content/plugins/asps-launch-button/images/launch_install_on.png";
-	var imgUpgradeBlue = "/wp-content/plugins/asps-launch-button/images/launch_upgrade_off.png";
-	var imgUpgradeGreen = "/wp-content/plugins/asps-launch-button/images/launch_upgrade_on.png";
-	var imgStarted = "/wp-content/plugins/asps-launch-button/images/launch_started.png";
-	var imgNoSupport = "/wp-content/plugins/asps-launch-button/images/launch_nosupport.png";
-	var imgWinRequired = "/wp-content/plugins/asps-launch-button/images/launch_required.png";
-	var imgMouseOff = "/wp-content/plugins/asps-launch-button/images/launch_asps_required.png";
-	var imgMouseOver = "/wp-content/plugins/asps-launch-button/images/launch_asps_required.png";
+	var aspsPluginUrl = document.getElementById('asps-plugin-url').value;
+	var imgLaunchBlue = aspsPluginUrl + "/asps-launch-button/images/launch_launch_off.png";
+	var imgLaunchGreen = aspsPluginUrl + "/asps-launch-button/images/launch_launch_on.png";
+	var imgInstallBlue = aspsPluginUrl + "/asps-launch-button/images/launch_install_off.png";
+	var imgInstallGreen = aspsPluginUrl + "/asps-launch-button/images/launch_install_on.png";
+	var imgUpgradeBlue = aspsPluginUrl + "/asps-launch-button/images/launch_upgrade_off.png";
+	var imgUpgradeGreen = aspsPluginUrl + "/asps-launch-button/images/launch_upgrade_on.png";
+	var imgStarted = aspsPluginUrl + "/asps-launch-button/images/launch_started.png";
+	var imgNoSupport = aspsPluginUrl + "/asps-launch-button/images/launch_nosupport.png";
+	var imgWinRequired = aspsPluginUrl + "/asps-launch-button/images/launch_required.png";
+	var imgMouseOff = aspsPluginUrl + "/asps-launch-button/images/launch_asps_required.png";
+	var imgMouseOver = aspsPluginUrl + "/asps-launch-button/images/launch_asps_required.png";
 	var appLaunch = 0;
 	var launchResult = "";
 	var retLink = "javascript:void(0)";
@@ -102,8 +102,8 @@ function LaunchClick(n){
 						imgMouseOff = imgLaunchBlue;
 						imgMouseOver = imgLaunchGreen;
     	 		 		//alert("Chrome version is " + chromeversion);
-    	 		 		//location.href = "/wp-content/plugins/asps-launch-button/download-asps.html?ms=chrome"; 
-        				retLink = "/wp-content/plugins/asps-launch-button/download-asps.html?ms=chrome";
+    	 		 		//location.href = aspsPluginUrl + "/asps-launch-button/download-asps.html?ms=chrome";
+        				retLink = aspsPluginUrl + "/asps-launch-button/download-asps.html?ms=chrome";
 					}
 				}
 			}
@@ -119,7 +119,7 @@ if (m_szWin){
 		if (version){
 			imgMouseOff = imgLaunchBlue;
 			imgMouseOver = imgLaunchGreen;
-		}
+		} console.log(version);
 		var a = version.split('.');
         	for (var i = 0; i < a.length; ++i) {
             	a[i] = Number(a[i]);
@@ -132,8 +132,8 @@ if (m_szWin){
 	} else if (m_bTrident){
 		imgMouseOff = imgNoSupport;
 		imgMouseOver = imgNoSupport;
-		location.href = "/wp-content/plugins/asps-launch-button/download-asps.html";
-		retLink = "/wp-content/plugins/asps-launch-button/download-asps.html?ms=trident";
+		location.href = aspsPluginUrl + "/asps-launch-button/download-asps.html";
+		retLink = aspsPluginUrl + "/asps-launch-button/download-asps.html?ms=trident";
 	} else if (m_bArtis){
 		imgMouseOff = imgStarted;
 		imgMouseOver = imgStarted;
@@ -142,9 +142,9 @@ if (m_szWin){
 		imgMouseOff = imgInstallBlue;
 		imgMouseOver = imgInstallGreen;
 		if (chrome42){
-			retLink = "/wp-content/plugins/asps-launch-button/download-asps.html?ms=chrome";
+			retLink = aspsPluginUrl + "/asps-launch-button/download-asps.html?ms=chrome";
 		} else {
-			retLink = "/wp-content/plugins/asps-launch-button/download-asps.html";
+			retLink = aspsPluginUrl + "/asps-launch-button/download-asps.html";
 		}
 	}
 } else {

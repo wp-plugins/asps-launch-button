@@ -2,7 +2,7 @@
 /*
 Plugin Name: ASPS Launch Button
 Plugin URI: http://www.artistscope.com/asps-web-browser-launch-button-wordpress.asp
-Version: 2.0
+Version: 2.1
 Description: Launches the ASPS Web Browser using the default browser
 Author: ArtistScope
 Author URI: http://www.artistscope.com
@@ -36,7 +36,7 @@ class Launch_Button extends WP_Widget
     $instance = wp_parse_args((array) $instance, array( 'title' => '' ));
     $title = $instance['title'];
 ?>
-  <p><label for="<?php echo $this->get_field_id('title'); ?>">Title: <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo attribute_escape($title); ?>" /></label></p>
+  <p><label for="<?php echo $this->get_field_id('title'); ?>">Title: <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
 <?php
   }
  
@@ -58,7 +58,8 @@ class Launch_Button extends WP_Widget
     //    echo $before_title . $title . $after_title;;
  
 ?>
-	<script type="text/javascript" src="/wp-content/plugins/asps-launch-button/asps-launch-button.js"></script>
+    <input id="asps-plugin-url" value="<?php echo plugins_url(); ?>" type="hidden" />
+	<script type="text/javascript" src="<?php echo plugins_url(); ?>/asps-launch-button/asps-launch-button.js"></script>
 	<script type="text/javascript">
 
 	document.write("<a href='");
